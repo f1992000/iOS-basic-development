@@ -13,23 +13,35 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwitchingViews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LightBlue" id="BYZ-38-t0r" customClass="ViewController" customModule="SwitchingViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zz7-NU-UWN">
-                                <rect key="frame" x="146.66666666666666" y="391" width="82" height="30"/>
-                                <state key="normal" title="Go to view2"/>
+                                <rect key="frame" x="84" y="391" width="207" height="30"/>
+                                <state key="normal" title="Program Control Go To View 2"/>
                                 <connections>
-                                    <segue destination="fI7-sp-d8z" kind="show" id="1UM-gl-bgE"/>
+                                    <action selector="goToView2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PQQ-Cb-qa2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43X-fl-Ugy">
+                                <rect key="frame" x="118.66666666666669" y="468" width="138" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ac4-La-5EV"/>
+                                </constraints>
+                                <state key="normal" title="Segue Go To View 2"/>
+                                <connections>
+                                    <action selector="segueGoToView2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VUE-zY-BJw"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.70784569857003632" green="1" blue="0.98151836803175907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zz7-NU-UWN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C7L-6H-FOf"/>
+                            <constraint firstItem="43X-fl-Ugy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y1o-tt-TDJ"/>
                             <constraint firstItem="zz7-NU-UWN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="els-7H-VKF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="43X-fl-Ugy" secondAttribute="bottom" constant="280" id="tfX-I5-P7z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,6 +52,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="fI7-sp-d8z" kind="show" identifier="segueGoToView2" id="3zZ-Nb-6lK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,33 +63,48 @@
         <!--Light Red-->
         <scene sceneID="jx1-rF-yhN">
             <objects>
-                <viewController id="fI7-sp-d8z" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LightRed" id="fI7-sp-d8z" customClass="LightRedViewController" customModule="SwitchingViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Xk-gl-joX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeU-Iq-1N1">
-                                <rect key="frame" x="145.66666666666666" y="391" width="84" height="30"/>
-                                <state key="normal" title="Go to View3"/>
+                                <rect key="frame" x="84" y="391" width="207" height="30"/>
+                                <state key="normal" title="Program Control Go To View 3"/>
                                 <connections>
-                                    <segue destination="kJK-xj-cFx" kind="show" id="goJ-do-ujH"/>
+                                    <action selector="goToView3:" destination="fI7-sp-d8z" eventType="touchUpInside" id="fEK-U9-BH0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE8-IN-Ld7">
+                                <rect key="frame" x="118.66666666666669" y="468" width="138" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dbN-Rd-bof"/>
+                                </constraints>
+                                <state key="normal" title="Sugue Go To View 3"/>
+                                <connections>
+                                    <action selector="segueGoToView3:" destination="fI7-sp-d8z" eventType="touchUpInside" id="D3G-rJ-4nf"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.77322743881079958" blue="0.94165185036337506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VeU-Iq-1N1" firstAttribute="centerY" secondItem="7Xk-gl-joX" secondAttribute="centerY" id="Txa-gi-1bU"/>
+                            <constraint firstItem="Igc-2c-gLe" firstAttribute="bottom" secondItem="SE8-IN-Ld7" secondAttribute="bottom" constant="280" id="Uxn-gE-RpR"/>
                             <constraint firstItem="VeU-Iq-1N1" firstAttribute="centerX" secondItem="7Xk-gl-joX" secondAttribute="centerX" id="b5u-af-GlX"/>
+                            <constraint firstItem="SE8-IN-Ld7" firstAttribute="centerX" secondItem="7Xk-gl-joX" secondAttribute="centerX" id="yyE-0n-VCG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Igc-2c-gLe"/>
                     </view>
                     <navigationItem key="navigationItem" title="Light Red" id="LFJ-gM-keI">
                         <barButtonItem key="rightBarButtonItem" title="Light Green" id="fdm-Iy-LoF">
                             <connections>
-                                <segue destination="kJK-xj-cFx" kind="show" id="VUf-Oe-CPP"/>
+                                <segue destination="kJK-xj-cFx" kind="show" identifier="" id="VUf-Oe-CPP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="kJK-xj-cFx" kind="show" identifier="segueGoToView3" id="aT1-VU-mq3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0oK-C9-v5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,11 +113,36 @@
         <!--Light Green-->
         <scene sceneID="35I-AJ-vCm">
             <objects>
-                <viewController id="kJK-xj-cFx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LightGreen" id="kJK-xj-cFx" customClass="LightGreenViewController" customModule="SwitchingViews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a0A-d4-aJB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huo-r1-qYq">
+                                <rect key="frame" x="135" y="391" width="105" height="30"/>
+                                <state key="normal" title="Back To View 2"/>
+                                <connections>
+                                    <action selector="backToView2:" destination="kJK-xj-cFx" eventType="touchUpInside" id="Mwc-VI-KRs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6i-LT-M8o">
+                                <rect key="frame" x="142.66666666666666" y="468" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Aeu-BL-Pfc"/>
+                                </constraints>
+                                <state key="normal" title="Back To Root"/>
+                                <connections>
+                                    <action selector="backToRoot:" destination="kJK-xj-cFx" eventType="touchUpInside" id="hsc-lZ-Lgl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.7084404190854191" green="1" blue="0.65055783754310625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="huo-r1-qYq" firstAttribute="centerX" secondItem="a0A-d4-aJB" secondAttribute="centerX" id="58k-jF-S1G"/>
+                            <constraint firstItem="3h2-rj-eIG" firstAttribute="bottom" secondItem="o6i-LT-M8o" secondAttribute="bottom" constant="280" id="AjE-2t-Rfj"/>
+                            <constraint firstItem="huo-r1-qYq" firstAttribute="centerY" secondItem="a0A-d4-aJB" secondAttribute="centerY" id="Eni-s5-El9"/>
+                            <constraint firstItem="o6i-LT-M8o" firstAttribute="centerX" secondItem="a0A-d4-aJB" secondAttribute="centerX" id="kJ8-e8-AIn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3h2-rj-eIG"/>
                     </view>
                     <navigationItem key="navigationItem" title="Light Green" id="9iu-2j-WnO"/>
@@ -116,7 +171,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="goJ-do-ujH"/>
-        <segue reference="1UM-gl-bgE"/>
+        <segue reference="aT1-VU-mq3"/>
+        <segue reference="3zZ-Nb-6lK"/>
     </inferredMetricsTieBreakers>
 </document>

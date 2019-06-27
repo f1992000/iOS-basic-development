@@ -12,6 +12,8 @@
 		3F9D8B3722C1C41700A2552E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9D8B3522C1C41700A2552E /* Main.storyboard */; };
 		3F9D8B3922C1C41B00A2552E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9D8B3822C1C41B00A2552E /* Assets.xcassets */; };
 		3F9D8B3C22C1C41B00A2552E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9D8B3A22C1C41B00A2552E /* LaunchScreen.storyboard */; };
+		3F9D8B4622C2029100A2552E /* LightRedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D8B4522C2029100A2552E /* LightRedViewController.swift */; };
+		3F9D8B4822C202D800A2552E /* LightGreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D8B4722C202D800A2552E /* LightGreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		3F9D8B3822C1C41B00A2552E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F9D8B3B22C1C41B00A2552E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F9D8B3D22C1C41B00A2552E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F9D8B4522C2029100A2552E /* LightRedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightRedViewController.swift; sourceTree = "<group>"; };
+		3F9D8B4722C202D800A2552E /* LightGreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightGreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				3F9D8B3122C1C41700A2552E /* AppDelegate.swift */,
 				3F9D8B3322C1C41700A2552E /* ViewController.swift */,
 				3F9D8B3522C1C41700A2552E /* Main.storyboard */,
+				3F9D8B4722C202D800A2552E /* LightGreenViewController.swift */,
+				3F9D8B4522C2029100A2552E /* LightRedViewController.swift */,
 				3F9D8B3822C1C41B00A2552E /* Assets.xcassets */,
 				3F9D8B3A22C1C41B00A2552E /* LaunchScreen.storyboard */,
 				3F9D8B3D22C1C41B00A2552E /* Info.plist */,
@@ -136,6 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F9D8B3422C1C41700A2552E /* ViewController.swift in Sources */,
+				3F9D8B4822C202D800A2552E /* LightGreenViewController.swift in Sources */,
+				3F9D8B4622C2029100A2552E /* LightRedViewController.swift in Sources */,
 				3F9D8B3222C1C41700A2552E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

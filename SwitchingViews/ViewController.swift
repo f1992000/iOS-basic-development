@@ -10,7 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBAction func goToView2(_ sender: UIButton) {
+    @IBAction func goToLightYellow(_ sender: UIButton) {
+        let lightYellow = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LightYellow")
+        
+        // from bottom to top
+        present(lightYellow, animated: true, completion: nil)
+        // from right to left
+        //navigationController?.pushViewController(lightYellow, animated: true)
+    }
+    
+    @IBAction func goToLightRed(_ sender: UIButton) {
         let lightRed = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LightRed")
         
         // from bottom to top
@@ -19,8 +28,8 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(lightRed, animated: true)
     }
     
-    @IBAction func segueGoToView2(_ sender: UIButton) {
-        performSegue(withIdentifier: "segueGoToView2", sender: nil)
+    @IBAction func segueGoToLightRed(_ sender: UIButton) {
+        performSegue(withIdentifier: "segueGoToLightRed", sender: nil)
     }
     
     override func viewDidLoad() {

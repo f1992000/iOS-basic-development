@@ -10,7 +10,7 @@ import UIKit
 
 class LightRedViewController: UIViewController {
 
-    @IBAction func goToView3(_ sender: UIButton) {
+    @IBAction func goToLightGreen(_ sender: UIButton) {
         let lightGreen = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LightGreen")
         
         //from right to left
@@ -20,8 +20,8 @@ class LightRedViewController: UIViewController {
 
     }
     
-    @IBAction func segueGoToView3(_ sender: UIButton) {
-        performSegue(withIdentifier: "segueGoToView3", sender: nil)
+    @IBAction func segueGoToLightGreen(_ sender: UIButton) {
+        performSegue(withIdentifier: "segueGoToLightGreen", sender: nil)
     }
     
     override func viewDidLoad() {

@@ -10,6 +10,11 @@ import UIKit
 
 class LightRedViewController: UIViewController {
 
+    @IBAction func goToTabBarController(_ sender: UIButton) {
+        let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController")
+        present(tabBarController, animated: true, completion: nil)
+    }
+    
     @IBAction func goToLightGreen(_ sender: UIButton) {
         let lightGreen = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LightGreen")
         

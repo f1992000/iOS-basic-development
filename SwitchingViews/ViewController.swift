@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBAction func goToLightYellow(_ sender: UIButton) {
         let lightYellow = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LightYellow")
         
@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         // from right to left
         //navigationController?.pushViewController(lightYellow, animated: true)
     }
+    
     
     @IBAction func goToLightRed(_ sender: UIButton) {
         let lightRed = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LightRed")
@@ -28,10 +29,15 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(lightRed, animated: true)
     }
     
+    
+    //@IBOutlet weak var textInputToLightYellow: UITextField!
+    
     @IBAction func segueGoToLightRed(_ sender: UIButton) {
+        // from bottom to top
         performSegue(withIdentifier: "segueGoToLightRed", sender: nil)
     }
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

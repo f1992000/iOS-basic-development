@@ -20,6 +20,10 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zz7-NU-UWN">
                                 <rect key="frame" x="74.666666666666686" y="391" width="226" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="5gA-0C-ALm"/>
+                                    <constraint firstAttribute="height" constant="30" id="pXf-q5-dof"/>
+                                </constraints>
                                 <state key="normal" title="Program Control Go To Light Red"/>
                                 <connections>
                                     <action selector="goToLightRed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bAn-aI-LWu"/>
@@ -45,12 +49,24 @@
                                     <action selector="goToLightYellow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTG-Qc-PZJ"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jh4-Ik-pdR">
+                                <rect key="frame" x="97.666666666666686" y="508" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="TxU-1M-74p"/>
+                                    <constraint firstAttribute="height" constant="30" id="dBx-EH-71H"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.81042724663651899" green="1" blue="0.99872002081286859" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oHF-qX-J6s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="12M-Fi-UkA"/>
+                            <constraint firstItem="jh4-Ik-pdR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1gX-G7-0PJ"/>
                             <constraint firstItem="oHF-qX-J6s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="3l7-6R-69K"/>
                             <constraint firstItem="zz7-NU-UWN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C7L-6H-FOf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jh4-Ik-pdR" secondAttribute="bottom" constant="240" id="FLA-Ug-QjN"/>
                             <constraint firstItem="43X-fl-Ugy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y1o-tt-TDJ"/>
                             <constraint firstItem="zz7-NU-UWN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="els-7H-VKF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="43X-fl-Ugy" secondAttribute="bottom" constant="280" id="tfX-I5-P7z"/>
@@ -65,6 +81,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="textInputToLightYellow" destination="jh4-Ik-pdR" id="cJg-4t-xrF"/>
                         <segue destination="fI7-sp-d8z" kind="show" identifier="segueGoToLightRed" id="3zZ-Nb-6lK"/>
                     </connections>
                 </viewController>
@@ -81,20 +98,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xir-pD-alS">
-                                <rect key="frame" x="170.66666666666666" y="391" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
+                                <rect key="frame" x="124" y="391" width="127" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="HmM-f0-1xL"/>
+                                    <constraint firstAttribute="height" constant="30" id="qDc-6z-CkO"/>
+                                </constraints>
+                                <state key="normal" title="Back To Light Blue"/>
                                 <connections>
                                     <action selector="backToLightBlue:" destination="Bw6-Ev-ZQh" eventType="touchUpInside" id="1at-JD-HfP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4j-Vz-5EF">
+                                <rect key="frame" x="166.66666666666666" y="324" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6sw-0a-gzp"/>
+                                    <constraint firstAttribute="width" constant="42" id="o4x-Gx-W24"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95970588796163814" blue="0.83272067152684459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="H4j-Vz-5EF" firstAttribute="top" secondItem="UYK-HU-gqh" secondAttribute="top" constant="280" id="Hkj-1A-SZk"/>
                             <constraint firstItem="xir-pD-alS" firstAttribute="centerX" secondItem="tGT-uZ-vMj" secondAttribute="centerX" id="QiM-z3-u4n"/>
                             <constraint firstItem="xir-pD-alS" firstAttribute="centerY" secondItem="tGT-uZ-vMj" secondAttribute="centerY" id="bH2-AD-yuW"/>
+                            <constraint firstItem="H4j-Vz-5EF" firstAttribute="centerX" secondItem="tGT-uZ-vMj" secondAttribute="centerX" id="gnG-5N-ZaY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UYK-HU-gqh"/>
                     </view>
+                    <connections>
+                        <outlet property="showLightBlueText" destination="H4j-Vz-5EF" id="nTQ-iz-bOG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Jf-Jy-iof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,6 +207,10 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeU-Iq-1N1">
                                 <rect key="frame" x="67" y="391" width="241" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2nL-NV-XLs"/>
+                                    <constraint firstAttribute="width" constant="241" id="eRP-8M-Py5"/>
+                                </constraints>
                                 <state key="normal" title="Program Control Go To Light Green"/>
                                 <connections>
                                     <action selector="goToLightGreen:" destination="fI7-sp-d8z" eventType="touchUpInside" id="q2D-nd-clB"/>
@@ -196,14 +236,26 @@
                                     <action selector="goToTabBarController:" destination="fI7-sp-d8z" eventType="touchUpInside" id="p8K-yx-Agz"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4SC-JF-VeP">
+                                <rect key="frame" x="97.666666666666686" y="508" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KjL-55-NjX"/>
+                                    <constraint firstAttribute="width" constant="180" id="SBr-Pz-SfZ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.77322743881079958" blue="0.94165185036337506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4SC-JF-VeP" firstAttribute="centerX" secondItem="7Xk-gl-joX" secondAttribute="centerX" id="AAk-Am-eb8"/>
                             <constraint firstItem="Pky-hA-Gd4" firstAttribute="centerX" secondItem="7Xk-gl-joX" secondAttribute="centerX" id="CBz-ps-zzQ"/>
                             <constraint firstItem="Pky-hA-Gd4" firstAttribute="top" secondItem="Igc-2c-gLe" secondAttribute="top" constant="240" id="HDf-wx-E75"/>
                             <constraint firstItem="VeU-Iq-1N1" firstAttribute="centerY" secondItem="7Xk-gl-joX" secondAttribute="centerY" id="Txa-gi-1bU"/>
                             <constraint firstItem="Igc-2c-gLe" firstAttribute="bottom" secondItem="SE8-IN-Ld7" secondAttribute="bottom" constant="280" id="Uxn-gE-RpR"/>
                             <constraint firstItem="VeU-Iq-1N1" firstAttribute="centerX" secondItem="7Xk-gl-joX" secondAttribute="centerX" id="b5u-af-GlX"/>
+                            <constraint firstItem="Igc-2c-gLe" firstAttribute="bottom" secondItem="4SC-JF-VeP" secondAttribute="bottom" constant="240" id="ppT-r8-Lzv"/>
                             <constraint firstItem="SE8-IN-Ld7" firstAttribute="centerX" secondItem="7Xk-gl-joX" secondAttribute="centerX" id="yyE-0n-VCG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Igc-2c-gLe"/>
@@ -216,6 +268,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="inputTextToLightGreen" destination="4SC-JF-VeP" id="4Fy-p2-AwA"/>
                         <segue destination="kJK-xj-cFx" kind="show" identifier="segueGoToLightGreen" id="aT1-VU-mq3"/>
                     </connections>
                 </viewController>
@@ -233,6 +286,10 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huo-r1-qYq">
                                 <rect key="frame" x="125.66666666666669" y="391" width="124" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QSa-So-Ewa"/>
+                                    <constraint firstAttribute="width" constant="124" id="sbD-VO-qgl"/>
+                                </constraints>
                                 <state key="normal" title="Back To Light Red"/>
                                 <connections>
                                     <action selector="backToView2:" destination="kJK-xj-cFx" eventType="touchUpInside" id="Mwc-VI-KRs"/>
@@ -248,17 +305,31 @@
                                     <action selector="backToRoot:" destination="kJK-xj-cFx" eventType="touchUpInside" id="hsc-lZ-Lgl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixW-Qk-X4c">
+                                <rect key="frame" x="163.66666666666666" y="188" width="48" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mgW-8P-xbJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.7084404190854191" green="1" blue="0.65055783754310625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="huo-r1-qYq" firstAttribute="centerX" secondItem="a0A-d4-aJB" secondAttribute="centerX" id="58k-jF-S1G"/>
                             <constraint firstItem="3h2-rj-eIG" firstAttribute="bottom" secondItem="o6i-LT-M8o" secondAttribute="bottom" constant="280" id="AjE-2t-Rfj"/>
                             <constraint firstItem="huo-r1-qYq" firstAttribute="centerY" secondItem="a0A-d4-aJB" secondAttribute="centerY" id="Eni-s5-El9"/>
+                            <constraint firstItem="ixW-Qk-X4c" firstAttribute="top" secondItem="3h2-rj-eIG" secondAttribute="top" constant="100" id="ZSK-0K-TKP"/>
                             <constraint firstItem="o6i-LT-M8o" firstAttribute="centerX" secondItem="a0A-d4-aJB" secondAttribute="centerX" id="kJ8-e8-AIn"/>
+                            <constraint firstItem="ixW-Qk-X4c" firstAttribute="centerX" secondItem="a0A-d4-aJB" secondAttribute="centerX" id="tD5-Bt-d9L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3h2-rj-eIG"/>
                     </view>
                     <navigationItem key="navigationItem" title="Light Green" id="9iu-2j-WnO"/>
+                    <connections>
+                        <outlet property="showLightRedText" destination="ixW-Qk-X4c" id="bUH-hi-s3B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ms9-F4-P3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

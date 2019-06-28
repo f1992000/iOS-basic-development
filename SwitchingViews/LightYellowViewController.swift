@@ -9,17 +9,21 @@
 import UIKit
 
 class LightYellowViewController: UIViewController {
-
+    
     @IBAction func backToLightBlue(_ sender: UIButton) {
         // come back for present
         dismiss(animated: true, completion: nil)
         // come back
         //navigationController?.popViewController(animated: true)
     }
+    
+    
+    @IBOutlet weak var showLightBlueText: UILabel!
+    var receiveLightBlueValue:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        showLightBlueText.text = receiveLightBlueValue
     }
 
 

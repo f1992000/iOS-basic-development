@@ -22,10 +22,12 @@ class LightGreenViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     
+    @IBOutlet weak var showLightRedText: UILabel!
+    var receiveLightRedValue:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        showLightRedText.text = receiveLightRedValue
     }
 
 }

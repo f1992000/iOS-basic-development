@@ -19,12 +19,13 @@ class LightYellowViewController: UIViewController {
     
     
     @IBOutlet weak var showLightBlueText: UILabel!
-    var receiveLightBlueValue:String?
+    var receiveLightBlueValue:String? = "No Input Value"
+    override func viewWillAppear(_ animated: Bool) {
+        showLightBlueText.text = receiveLightBlueValue
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showLightBlueText.text = receiveLightBlueValue
     }
-
-
 }

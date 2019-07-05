@@ -49,11 +49,11 @@
                                     <action selector="goToLightYellow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTG-Qc-PZJ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jh4-Ik-pdR">
-                                <rect key="frame" x="97.666666666666686" y="508" width="180" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VJd-RA-1W3">
+                                <rect key="frame" x="97.666666666666686" y="288" width="180" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="TxU-1M-74p"/>
-                                    <constraint firstAttribute="height" constant="30" id="dBx-EH-71H"/>
+                                    <constraint firstAttribute="width" constant="180" id="Oc6-JV-6yv"/>
+                                    <constraint firstAttribute="height" constant="30" id="flx-0M-G51"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -63,10 +63,10 @@
                         <color key="backgroundColor" red="0.81042724663651899" green="1" blue="0.99872002081286859" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oHF-qX-J6s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="12M-Fi-UkA"/>
-                            <constraint firstItem="jh4-Ik-pdR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1gX-G7-0PJ"/>
                             <constraint firstItem="oHF-qX-J6s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="3l7-6R-69K"/>
                             <constraint firstItem="zz7-NU-UWN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C7L-6H-FOf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jh4-Ik-pdR" secondAttribute="bottom" constant="240" id="FLA-Ug-QjN"/>
+                            <constraint firstItem="VJd-RA-1W3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H4r-T6-Xel"/>
+                            <constraint firstItem="VJd-RA-1W3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="OjX-dY-Gsx"/>
                             <constraint firstItem="43X-fl-Ugy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y1o-tt-TDJ"/>
                             <constraint firstItem="zz7-NU-UWN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="els-7H-VKF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="43X-fl-Ugy" secondAttribute="bottom" constant="280" id="tfX-I5-P7z"/>
@@ -81,7 +81,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="textInputToLightYellow" destination="jh4-Ik-pdR" id="cJg-4t-xrF"/>
+                        <outlet property="inputTextToLightYellow" destination="VJd-RA-1W3" id="DEc-dh-ysV"/>
                         <segue destination="fI7-sp-d8z" kind="show" identifier="segueGoToLightRed" id="3zZ-Nb-6lK"/>
                     </connections>
                 </viewController>
@@ -109,12 +109,11 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4j-Vz-5EF">
-                                <rect key="frame" x="166.66666666666666" y="324" width="42" height="21"/>
+                                <rect key="frame" x="163.66666666666666" y="324" width="48" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="6sw-0a-gzp"/>
-                                    <constraint firstAttribute="width" constant="42" id="o4x-Gx-W24"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -217,11 +216,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SE8-IN-Ld7">
-                                <rect key="frame" x="109" y="468" width="157" height="30"/>
+                                <rect key="frame" x="101.66666666666669" y="468" width="172" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="dbN-Rd-bof"/>
                                 </constraints>
-                                <state key="normal" title="Sugue Go To Light Red"/>
+                                <state key="normal" title="Sugue Go To Light Green"/>
                                 <connections>
                                     <action selector="segueGoToLightGreen:" destination="fI7-sp-d8z" eventType="touchUpInside" id="ml5-NS-QLj"/>
                                 </connections>

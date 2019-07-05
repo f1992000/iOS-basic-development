@@ -17,17 +17,25 @@ class LightGreenViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    
     @IBAction func backToRoot(_ sender: UIButton) {
         // come back root
         navigationController?.popToRootViewController(animated: true)
     }
     
+    
     @IBOutlet weak var showLightRedText: UILabel!
-    var receiveLightRedValue:String?
+    var receiveLightRedValue:String? = "No Input Value"
+    override func viewWillAppear(_ animated: Bool) {
+        if receiveLightRedValue == nil{
+            receiveLightRedValue = "No Input Value"
+        }
+        showLightRedText.text = receiveLightRedValue
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showLightRedText.text = receiveLightRedValue
     }
 
 }

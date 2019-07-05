@@ -10,6 +10,7 @@ import UIKit
 
 class LightRedViewController: UIViewController {
     
+    // go to tab bar page
     @IBAction func goToTabBarController(_ sender: UIButton) {
         let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController")
         present(tabBarController, animated: true, completion: nil)
@@ -28,17 +29,18 @@ class LightRedViewController: UIViewController {
     
     
     @IBOutlet weak var inputTextToLightGreen: UITextField!
-    
     @IBAction func segueGoToLightGreen(_ sender: UIButton) {
         // Input Text Transfer
         if let inputText = inputTextToLightGreen.text{
             if inputText == ""{
                 //build alert
                 let nilInputTextAlert = UIAlertController(title: "No Value", message: "Please enter value", preferredStyle: .alert)
-                let nilInputTextAlertButtonGoToNext = UIAlertAction(title: "Go To Light Greeen", style: .default, handler: nil)
                 let nilInputTextAlertButtonCancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-                nilInputTextAlert.addAction(nilInputTextAlertButtonGoToNext)
+                let nilInputTextAlertButtonGoToNext = UIAlertAction(title: "Go To Light Greeen", style: .default, handler: {
+                    ACTION in self.performSegue(withIdentifier: "segueGoToLightGreen", sender: nil)
+                })
                 nilInputTextAlert.addAction(nilInputTextAlertButtonCancel)
+                nilInputTextAlert.addAction(nilInputTextAlertButtonGoToNext)
                 present(nilInputTextAlert, animated: true, completion: nil)
             }else{
                 inputTextToLightGreen.text = ""
